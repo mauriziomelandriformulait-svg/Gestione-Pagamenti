@@ -70,6 +70,26 @@
             text-transform: uppercase;
         }
 
+        /* Titolo Macro Categoria cliccabile */
+        .macro-title-btn {
+            background: none;
+            border: none;
+            color: #008000;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .macro-title-btn:hover {
+            color: #004d00;
+            text-decoration: underline;
+        }
+
         /* Elementi Cliccabili Interattivi (Icona + Testo) */
         .interactive-item {
             display: inline-flex;
@@ -168,6 +188,23 @@
             gap: 8px;
         }
 
+        .section-subtitle button {
+            background: none;
+            border: none;
+            color: #008000;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .section-subtitle button:hover {
+            color: #004d00;
+        }
+
         /* Box di blocco per macro categorie semplici (Ri.Ba, Cassa) */
         .macro-box {
             background-color: #f8fafc;
@@ -189,7 +226,7 @@
                 <button class="interactive-item" onclick="inviaMessaggioNavigazione('/gestione-scadenzario')">
                     <span class="icon">🔍</span> Gestione Scadenzario
                 </button>
-                <button class="interactive-item" onclick="inviaMessaggioNavigazione('/analisi-partite')">
+                <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/A508/1')">
                     <span class="icon">📊</span> Analisi Partite
                 </button>
             </div>
@@ -199,62 +236,35 @@
             <div class="flow-diagram">
                 
                 <div class="flow-vertical-stack">
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/proposta-automatica')">
+                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/payDue/1')">
                         <span class="icon">📋</span> Proposta Automatica
                     </button>
                     
                     <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/A502/1')">
                         <span class="icon">🧮</span> Saldaconto Manuale
                     </button>
-                    
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/assegnazione-banca')">
-                        <span class="icon">🏛️</span> Assegnazione Banca Libera/Canalizz.
-                    </button>
                 </div>
 
                 <div class="line-connector"></div>
 
                 <div class="flow-center-hub">
-                    <span style="font-size: 32px;">📚</span>
-                    <span style="color: #008000; font-weight: bold; font-size: 14px;">Distinta Bancaria Automatica</span>
-                    
-                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                        <button class="interactive-item" onclick="inviaMessaggioNavigazione('/stampa')">
-                            <span class="icon">🖨️</span> Stampa
-                        </button>
-                        <button class="interactive-item" onclick="inviaMessaggioNavigazione('/creazione-disp-elettronico')">
-                            <span class="icon">💾</span> Creazione Disp. Elettronico
-                        </button>
-                    </div>
+                    <span style="font-size: 32px; cursor: pointer;" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/payGroup/1')">📚</span>
+                    <button class="interactive-item" style="font-weight: bold; font-size: 14px; text-align: center; justify-content: center; padding: 2px 0;" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/payGroup/1')">
+                        Distinte di pagamento
+                    </button>
                 </div>
 
                 <div class="line-connector"></div>
 
                 <div class="flow-vertical-stack">
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/contabilizzazione-bonifico')">
+                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/payGroup/1')">
                         <span class="icon">📱</span> Contabilizzazione
                     </button>
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/remote-banking')">
-                        <span class="icon">☁️</span> REMOTE
+                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://www.intesasanpaolo.com/it/common/footer/cookies.html')">
+                        <span class="icon">🏛️</span> Homebanking
                     </button>
                 </div>
 
-            </div>
-
-            <div style="margin-top: 60px;">
-                <div class="macro-title">Proforma</div>
-            </div>
-
-            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px dashed #e2e8f0; display: flex; gap: 20px;">
-                <div>
-                    <span style="color: #008000; font-weight: bold; font-size: 12px; display: block; margin-bottom: 5px;">CAMBI VALUTA</span>
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/cambi-sito-web')">
-                        <span class="icon">🌐</span> Sito WEB
-                    </button>
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/cambi-download')">
-                        <span class="icon">📥</span> Download
-                    </button>
-                </div>
             </div>
 
         </div>
@@ -262,23 +272,21 @@
         <div class="side-column">
             
             <div class="macro-box">
-                <div class="macro-title" style="font-size: 18px;">Assegno</div>
-                <div style="display: flex; flex-direction: column; gap: 15px;">
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/A502/1')">
-                        <span class="icon">🧮</span> Saldaconto Manuale
-                    </button>
-                    <button class="interactive-item" onclick="inviaMessaggioNavigazione('/contabilizzazione-assegno')">
-                        <span class="icon">📱</span> Contabilizzazione
-                    </button>
+                <div style="margin-bottom: 0;">
+                    <button class="macro-title-btn" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/A502/1')">Assegno</button>
                 </div>
             </div>
 
             <div class="macro-box">
-                <div class="macro-title" style="font-size: 18px; margin-bottom: 0;">Ri. Ba.</div>
+                <div style="margin-bottom: 0;">
+                    <button class="macro-title-btn" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/desktop/AFC%20-%20Fornitori%20e%20Rit.acc.')">Ri. Ba.</button>
+                </div>
             </div>
 
             <div class="macro-box">
-                <div class="macro-title" style="font-size: 18px; margin-bottom: 0;">Cassa</div>
+                <div style="margin-bottom: 0;">
+                    <button class="macro-title-btn" onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/desktop/AFC%20-%20Fornitori%20e%20Rit.acc.')">Cassa</button>
+                </div>
             </div>
 
             <div class="macro-box">
@@ -292,13 +300,13 @@
             <div>
                 <div class="section-subtitle">🏢 Anagrafiche</div>
                 <ul class="links-list">
-                    <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/fornitori')">Fornitori</button></li>
-                    <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/banche')">Banche</button></li>
+                    <li><button onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/subjects/1')">Fornitori</button></li>
+                    <li><button onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/desktop/AFC%20-%20Banche')">Banche</button></li>
                     <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/casse')">Casse</button></li>
                     <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/transazioni')">Transazioni Pagamento</button></li>
                     <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/destinazioni')">Destinazioni Pagamento</button></li>
                     <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/incrocio')">Incrocio Conto/Trans.</button></li>
-                    <li><button onclick="inviaMessaggioNavigazione('/anagrafiche/tabella-cambi')">Tabella dei cambi</button></li>
+                    <li><button onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/C514/1')">Cambi</button></li>
                 </ul>
             </div>
 
@@ -306,13 +314,15 @@
                 <div class="section-subtitle">👓 Consultazioni</div>
                 <ul class="links-list">
                     <li><button onclick="inviaMessaggioNavigazione('/consultazioni/situazione-fornitore')">Situazione Fornitore</button></li>
-                    <li><button onclick="inviaMessaggioNavigazione('/consultazioni/aging-fornitore')">Aging Fornitore alla data</button></li>
-                    <li><button onclick="inviaMessaggioNavigazione('/consultazioni/tracciabilita')">Tracciabilità Movimenti Pagamenti</button></li>
+                    <li><button onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/ageing/1')">Ageing</button></li>
                 </ul>
             </div>
 
             <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid #e2e8f0;">
-                <div class="section-subtitle">🖨️ Stampe</div>
+                <div class="section-subtitle">
+                    <span style="font-size: 18px;">🖨️</span> 
+                    <button onclick="inviaMessaggioNavigazione('https://diapdemo.formula.it:8282/due/#/home/workArea/dnow2/A430/1')">Report finanziari</button>
+                </div>
             </div>
 
         </div>
